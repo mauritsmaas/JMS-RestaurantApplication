@@ -1,0 +1,9 @@
+
+|squid:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦ºò‹øÿÿÿÿ8‹‰ÿÜ›-
+jsquid:UselessImportCheck":Remove this unused import 'javafx.scene.control.ListView'.(ôõÂÄøÿÿÿÿ8Ç‡ùÛ›-
+V
+squid:S106("9Replace this use of System.out or System.err by a logger.(Ìçïâ8ı³ùÛ›-
+|squid:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(Šã¾±üÿÿÿÿ8Õ¤„İ›-
+Osquid:S1172'"2Remove this unused method parameter "actionEvent".(À—s8’ØõÜ›-
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…Ş¾Òşÿÿÿÿ8ÒÜÔÓ›-
+lsquid:UselessImportCheck"<Remove this unused import 'javafx.scene.control.ScrollPane'.( ––ùşÿÿÿÿ8Ã˜˜Ü›-

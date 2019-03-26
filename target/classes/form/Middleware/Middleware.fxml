@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.Middleware.MiddlewareController">
+   <children>
+      <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Middelware">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <ListView layoutX="24.0" layoutY="69.0" prefHeight="229.0" prefWidth="553.0" />
+      <Button fx:id="btnRefresh" layoutX="218.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnRefreshAction" prefHeight="39.0" prefWidth="164.0" text="Refresh" />
+   </children>
+</AnchorPane>

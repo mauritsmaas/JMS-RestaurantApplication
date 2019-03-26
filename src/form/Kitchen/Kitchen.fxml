@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.Kitchen.KitchenController">
+   <children>
+      <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kitchen" wrappingWidth="126.6708984375">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <ListView fx:id="listKitchen" layoutX="14.0" layoutY="44.0" prefHeight="322.0" prefWidth="450.0" />
+      <Button fx:id="button1" layoutX="476.0" layoutY="136.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="36.0" prefWidth="104.0" text="Button1" />
+      <Button fx:id="button2" layoutX="476.0" layoutY="200.0" mnemonicParsing="false" onAction="#btn2Action" prefHeight="36.0" prefWidth="104.0" text="Button2" />
+   </children>
+</AnchorPane>
