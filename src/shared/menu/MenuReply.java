@@ -4,26 +4,26 @@ import shared.IMessage;
 
 public class MenuReply implements IMessage {
 
-    private boolean ready; // the status of menu
+    private int rating; // the rating of menu
     private String kitchenID; // the unique kitchen identification
 
     public MenuReply() {
         super();
-        this.ready = false;
+        this.rating = 0;
         this.kitchenID = "";
     }
-    public MenuReply(boolean ready, String kitchenID) {
+    public MenuReply(int rating, String kitchenID) {
         super();
-        this.ready = ready;
+        this.rating = rating;
         this.kitchenID = kitchenID;
     }
 
-    public boolean isReady() {
-        return ready;
+    public int getRating() {
+        return rating;
     }
 
-    public void setReady(boolean ready) {
-        this.ready = ready;
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public String getKitchenID() {
@@ -36,12 +36,12 @@ public class MenuReply implements IMessage {
 
     @Override
     public String toString(){
-        return " ready="+String.valueOf(ready) + " kitchenID="+String.valueOf(kitchenID);
+        return " rating="+String.valueOf(rating) + " kitchenID="+String.valueOf(kitchenID);
     }
 
     @Override
     public String getCommaSeperatedValue() {
-        return kitchenID + "," + ready;
+        return kitchenID + "," + rating;
     }
 
     @Override
@@ -51,6 +51,6 @@ public class MenuReply implements IMessage {
             throw new IllegalArgumentException();
 
         kitchenID = array[0];
-        ready = Boolean.parseBoolean(array[1]);
+        rating = Integer.parseInt(array[1]);
     }
 }

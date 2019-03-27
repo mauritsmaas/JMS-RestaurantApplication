@@ -37,8 +37,6 @@ public class WaiterController {
 
 
     public void btnSubmitAction(ActionEvent actionEvent) {
-        System.out.println(textFieldMenu.getText() +"<-- Menu ,Amount --> "+ tfAmount.getText() + "SSN:"+ textFieldSsn.getText());
-
         int ssn = Integer.parseInt(textFieldSsn.getText());
         String menu = textFieldMenu.getText();
         int amount = Integer.parseInt(tfAmount.getText());
