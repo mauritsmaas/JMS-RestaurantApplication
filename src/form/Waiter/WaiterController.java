@@ -1,5 +1,7 @@
 package form.Waiter;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
@@ -21,18 +23,18 @@ public class WaiterController {
     @FXML
     private TextField textFieldSsn;
     @FXML
-    private TextArea tAMenus;
+    private ListView lvMenus;
 
     private MiddlewareAppGateway gateway;
 
-    private DefaultListModel<RequestReply<MenuRequest,MenuReply>> listModel;
-    private JList<RequestReply<MenuRequest,MenuReply>> requestReplyList;
+    private ObservableList<RequestReply<MenuRequest,MenuReply>> listModel;
+    //private JList<RequestReply<MenuRequest,MenuReply>> requestReplyList;
 
     @FXML
     public void initialize(){
         gateway = new MiddlewareAppGateway(this);
-        listModel = new DefaultListModel<RequestReply<MenuRequest,MenuReply>>();
-        requestReplyList = new JList<RequestReply<MenuRequest,MenuReply>>(listModel);
+        listModel = FXCollections.observableArrayList();
+        //requestReplyList = new JList<RequestReply<MenuRequest,MenuReply>>(listModel);
     }
 
 
@@ -43,18 +45,19 @@ public class WaiterController {
 
         MenuRequest request = new MenuRequest(ssn, menu, amount);
         RequestReply rr = new RequestReply<MenuRequest, MenuReply>(request, null);
-        listModel.addElement(rr);
+        listModel.add(rr);
         gateway.orderAMenu(request);
+        lvMenus.setItems(listModel);
 
     }
 
     public void addReply(MenuRequest request, MenuReply menuReply) {
-        for (int i = 0; i < listModel.getSize(); i++){
+        for (int i = 0; i < listModel.size(); i++){
             RequestReply<MenuRequest,MenuReply> rr = listModel.get(i);
             if (rr.getRequest() == request){
                 rr.setReply(menuReply);
-                requestReplyList.repaint();
-                tAMenus.appendText(listModel.get(i).toString());
+                lvMenus.setItems(listModel);
+                lvMenus.refresh();
                 break;
             }
         }

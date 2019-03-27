@@ -9,16 +9,16 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.net.URL;
 
-public class KitchenStart extends Application {
+public class KitchenStartNed extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        File file = new File("src/form/Kitchen/Kitchen.fxml");
-        URL url = file.toURI().toURL();
-        Parent root = FXMLLoader.load(url);
+        File file1 = new File("src/form/Kitchen/KitchenNed.fxml");
+        URL url1 = file1.toURI().toURL();
+        Parent root1 = FXMLLoader.load(url1);
 
-        primaryStage.setTitle("KITCHEN - Indisch");
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setTitle("KITCHEN - Nederlands");
+        primaryStage.setScene(new Scene(root1, 600, 500));
         primaryStage.show();
     }
 

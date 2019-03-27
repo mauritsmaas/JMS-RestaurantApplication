@@ -1,6 +1,11 @@
 package form.Middleware;
 
+import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 import shared.kitchen.KitchenMenuReply;
 import shared.kitchen.KitchenMenuRequest;
 import shared.menu.MenuReply;
@@ -12,14 +17,18 @@ import java.util.Map;
 
 public class MiddlewareController {
 
+    @FXML
+    private ListView lvRequest;
+
     private WaiterAppGateway waiterAppGateway;
     private KitchenAppGateway kitchenAppGateway;
     private Map<String, MenuRequest> menuRequests;
 
-    private DefaultListModel<JListLine> listModel = new DefaultListModel<>();
-    private JList<JListLine> list = new JList<>(listModel);
+    private ObservableList<JListLine> listModel;
+    //private JList<JListLine> list = new JList<>(listModel);
 
     public void initialize(){
+        listModel = FXCollections.observableArrayList();
         waiterAppGateway = new WaiterAppGateway(this);
         kitchenAppGateway = new KitchenAppGateway(this);
         menuRequests = new HashMap<>();
@@ -27,12 +36,17 @@ public class MiddlewareController {
     }
 
     public void btnRefreshAction(ActionEvent actionEvent) {
-
+        lvRequest.refresh();
     }
 
-    public void add(MenuRequest menuRequest, String correlationId) {
+    public void add(final MenuRequest menuRequest, String correlationId) {
         menuRequests.put(correlationId, menuRequest);
-        listModel.addElement(new JListLine(menuRequest));
+        Platform.runLater(new Runnable() {
+            @Override public void run() {
+                listModel.add(new JListLine(menuRequest));
+            }
+        });
+        //listModel.add(new JListLine(menuRequest));
         KitchenMenuRequest kitchenMenuRequest = new KitchenMenuRequest(menuRequest.getMenu(), menuRequest.getAmount());
         kitchenAppGateway.sendKitchenRequest(kitchenMenuRequest, correlationId);
         this.add(menuRequest, kitchenMenuRequest);
@@ -42,7 +56,7 @@ public class MiddlewareController {
         JListLine rr = getLine(menuRequests.get(corrolationId));
         if (rr!= null && kitchenMenuReply != null){
             rr.setKitchenMenuReply(kitchenMenuReply);
-            list.repaint();
+            lvRequest.setItems(listModel);
         }
         waiterAppGateway.menuReply(new MenuReply(kitchenMenuReply.getRating(), kitchenMenuReply.getKitchenID()), corrolationId);
     }
@@ -51,12 +65,13 @@ public class MiddlewareController {
         JListLine rr = getLine(menuRequest);
         if (rr!= null && kitchenMenuRequest != null){
             rr.setKitchenMenuRequest(kitchenMenuRequest);
-            list.repaint();
+            lvRequest.setItems(listModel);
+            lvRequest.refresh();
         }
     }
 
     private JListLine getLine(MenuRequest request){
-        for (int i = 0; i < listModel.getSize(); i++){
+        for (int i = 0; i < listModel.size(); i++){
             JListLine rr =listModel.get(i);
             if (rr.getMenuRequest() == request){
                 return rr;

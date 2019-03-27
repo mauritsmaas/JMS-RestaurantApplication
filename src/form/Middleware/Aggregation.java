@@ -48,7 +48,7 @@ public class Aggregation {
     public KitchenMenuReply getBestReply() {
         KitchenMenuReply bestReply = null;
         for (KitchenMenuReply reply : replies) {
-            if (bestReply == null || bestReply.getRating() > reply.getRating()) {
+            if (bestReply == null || bestReply.getRating() < reply.getRating()) {
                 bestReply = reply;
             }
         }
