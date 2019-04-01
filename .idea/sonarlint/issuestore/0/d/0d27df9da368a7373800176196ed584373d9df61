@@ -1,5 +1,5 @@
 
-usquid:S00117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø†•Òûÿÿÿÿ8‹©ÅÓ›-
 Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‹©ÅÓ›-
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(ÙËÍ²üÿÿÿÿ8‹©ÅÓ›-
+usquid:S00117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø†•Òûÿÿÿÿ8‹©ÅÓ›-

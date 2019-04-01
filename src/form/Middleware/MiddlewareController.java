@@ -46,7 +46,6 @@ public class MiddlewareController {
                 listModel.add(new JListLine(menuRequest));
             }
         });
-        //listModel.add(new JListLine(menuRequest));
         KitchenMenuRequest kitchenMenuRequest = new KitchenMenuRequest(menuRequest.getMenu(), menuRequest.getAmount());
         kitchenAppGateway.sendKitchenRequest(kitchenMenuRequest, correlationId);
         this.add(menuRequest, kitchenMenuRequest);
@@ -57,6 +56,7 @@ public class MiddlewareController {
         if (rr!= null && kitchenMenuReply != null){
             rr.setKitchenMenuReply(kitchenMenuReply);
             lvRequest.setItems(listModel);
+            lvRequest.refresh();
         }
         waiterAppGateway.menuReply(new MenuReply(kitchenMenuReply.getRating(), kitchenMenuReply.getKitchenID()), corrolationId);
     }

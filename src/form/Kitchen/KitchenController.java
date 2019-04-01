@@ -7,14 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import org.apache.activemq.ActiveMQConnection;
-import org.apache.activemq.ActiveMQConnectionFactory;
 import shared.kitchen.KitchenMenuReply;
 import shared.kitchen.KitchenMenuRequest;
 import shared.request.RequestReply;
-
-import javax.jms.*;
-import javax.swing.*;
 
 public class KitchenController implements IKitchenController{
 
@@ -26,7 +21,6 @@ public class KitchenController implements IKitchenController{
     private String kitchenName = "Indisch";
     private MiddlewareAppGateway gateway;
     private ObservableList<RequestReply<KitchenMenuRequest, KitchenMenuReply>> listModel;
-    private ObservableList<RequestReply<KitchenMenuRequest, KitchenMenuReply>> list;
 
     public void initialize(){
         gateway = new MiddlewareAppGateway(this, kitchenName);

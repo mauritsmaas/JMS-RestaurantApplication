@@ -1,0 +1,17 @@
+
+[
+squid:S106O"9Replace this use of System.out or System.err by a logger.(ÙËÍ²üÿÿÿÿ8ôà©ò›-
+Osquid:S3599",Use another way to initialize this instance.(™—‡Æùÿÿÿÿ8Ÿšäó›-
+Jsquid:S3599",Use another way to initialize this instance.(âıø¸8Ÿšäó›-
+wsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(âıø¸8Ÿšäó›-
+Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(‡œ£ÿÿÿÿÿ8ôà©ò›-
+Fsquid:S1148/"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ôà©ò›-
+Isquid:S3599",Use another way to initialize this instance.(úïşV8ôà©ò›-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹˜˜Âÿÿÿÿÿ
+Wsquid:S1172M"4Remove this unused method parameter "CorrelationId".(Ş×ÏÅøÿÿÿÿ8ôà©ò›-
+Jsquid:S3599",Use another way to initialize this instance.(¿âÕŞ8Ÿšäó›-
+usquid:S00117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş×ÏÅøÿÿÿÿ8ôà©ò›-
+vsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(úïşV8ôà©ò›-
+wsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(¿âÕŞ8Ÿšäó›-
+|squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(™—‡Æùÿÿÿÿ8Ÿšäó›-
+Fsquid:S1148H"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ôà©ò›-

@@ -1,7 +1,5 @@
 
-Ÿsquid:S1186
-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(èŞÇê8”¿çÓ›-
-Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œ„¬ø8…€çÓ›-
-zsquid:UselessImportCheck"JRemove this unused import 'org.apache.activemq.ActiveMQConnectionFactory'.(‘£‘Áşÿÿÿÿ8”¿çÓ›-
-ssquid:UselessImportCheck"CRemove this unused import 'org.apache.activemq.ActiveMQConnection'.(§°§Íıÿÿÿÿ8ôõçÓ›-
 xsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËÊÃ	8…€çÓ›-
+Ÿsquid:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œ„¬ø8âÕØ‚œ-
+Psquid:S1172"2Remove this unused method parameter "actionEvent".(èŞÇê8âÕØ‚œ-
+Zsquid:S2589""7Remove this expression which always evaluates to "true"(¹øÕêûÿÿÿÿ8âÕØ‚œ-

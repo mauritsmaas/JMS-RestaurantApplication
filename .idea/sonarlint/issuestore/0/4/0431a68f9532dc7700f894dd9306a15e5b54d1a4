@@ -1,0 +1,6 @@
+
+qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËÊÃ	
+Isquid:S1172"2Remove this unused method parameter "actionEvent".(èÞÇê
+?squid:S1068"(Remove this unused "list" private field.(’•ÝŒ
+Ssquid:S2589#"7Remove this expression which always evaluates to "true"(¹øÕêûÿÿÿÿ
+˜squid:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œ„¬ø

@@ -15,8 +15,7 @@
          </font>
       </Text>
       <ListView fx:id="listKitchen" layoutX="14.0" layoutY="44.0" prefHeight="278.0" prefWidth="450.0" />
-      <Button fx:id="button1" layoutX="476.0" layoutY="136.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="36.0" prefWidth="104.0" text="Button1" />
-      <Button fx:id="button2" layoutX="476.0" layoutY="200.0" mnemonicParsing="false" onAction="#btn2Action" prefHeight="36.0" prefWidth="104.0" text="Button2" />
+      <Button fx:id="button1" layoutX="476.0" layoutY="136.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="36.0" prefWidth="104.0" text="send" />
       <TextField fx:id="tfRating" layoutX="14.0" layoutY="334.0" prefHeight="31.0" prefWidth="450.0" />
    </children>
 </AnchorPane>

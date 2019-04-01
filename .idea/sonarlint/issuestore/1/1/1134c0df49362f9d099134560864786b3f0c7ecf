@@ -1,9 +1,7 @@
 
-jsquid:UselessImportCheck":Remove this unused import 'javafx.scene.control.ListView'.(ôõÂÄøÿÿÿÿ8Ç‡ùÛ›-
-|squid:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦ºò‹øÿÿÿÿ8‹‰ÿÜ›-
-V
-squid:S106("9Replace this use of System.out or System.err by a logger.(Ìçïâ8ı³ùÛ›-
 ~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…Ş¾Òşÿÿÿÿ8ÒÜÔÓ›-
-lsquid:UselessImportCheck"<Remove this unused import 'javafx.scene.control.ScrollPane'.( ––ùşÿÿÿÿ8Ã˜˜Ü›-
-Osquid:S1172'"2Remove this unused method parameter "actionEvent".(À—s8’ØõÜ›-
-|squid:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(Šã¾±üÿÿÿÿ8Õ¤„İ›-
+lsquid:UselessImportCheck"<Remove this unused import 'javafx.scene.control.ScrollPane'.( ––ùşÿÿÿÿ8Ã˜˜Ü›-
+esquid:UselessImportCheck	":Remove this unused import 'javafx.scene.control.TextArea'.(ö ¸8ÇÙûø›-
+isquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ËüÏÚ8§“·‚œ-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“¾‘Ûùÿÿÿÿ8§“·‚œ-
+Osquid:S1172)"2Remove this unused method parameter "actionEvent".(À—s8’ØõÜ›-
